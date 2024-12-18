@@ -8,6 +8,7 @@ import { RegisterScreen } from '@screens/RegisterScreen';
 import { EnrollmentSummaryScreen } from '@screens/EnrollmentSummaryScreen';
 import { SubjectSelectionScreen } from '@screens/SubjectSelectionScreen';
 import { EnrollmentScreen } from '@screens/EnrollmentScreen';
+import { AllSubjectsScreen } from '@screens/AllSubjectsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +37,7 @@ export default function Index() {
         <Stack.Screen name="Enrollment" component={EnrollmentScreen} />
         <Stack.Screen name="SubjectSelection" component={SubjectSelectionScreen} />
         <Stack.Screen name="EnrollmentSummary" component={EnrollmentSummaryScreen} />
+        <Stack.Screen name="AllSubjects" component={AllSubjectsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

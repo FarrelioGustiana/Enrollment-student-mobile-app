@@ -35,7 +35,7 @@ export function EnrollmentScreen({ navigation }: any) {
 
   const handleSelectSubjects = () => {
     if (enrollment) {
-      Alert.alert('Already Enrolled', 'You have already enrolled in subjects. You cannot enroll again.');
+      navigation.navigate('AllSubjects');
     } else {
       navigation.navigate('SubjectSelection');
     }
