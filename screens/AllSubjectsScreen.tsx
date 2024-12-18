@@ -4,6 +4,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import Subject from '@model/subject';
 import { db } from '@config/firebase';
 import { theme } from '@/theme';
+import { Button } from '@components/Button';
 
 export function AllSubjectsScreen({ navigation }: any) {
   const [subjects, setSubjects] = useState<Subject[]>([]);
@@ -23,7 +24,11 @@ export function AllSubjectsScreen({ navigation }: any) {
       console.error('Failed to load subjects:', error);
       Alert.alert('Error', 'Failed to load subjects');
     }
-  };
+    };
+    
+    const handleBack = () => {
+        navigation.goBack();
+    };
 
   return (
     <View style={styles.container}>
@@ -38,7 +43,8 @@ export function AllSubjectsScreen({ navigation }: any) {
           </View>
         )}
         style={styles.list}
-      />
+          />
+          <Button title="Back" variant="secondary" onPress={handleBack} />
     </View>
   );
 }
